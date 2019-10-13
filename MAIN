@@ -1,0 +1,22 @@
+#include <iostream>
+#include "Conta.h"
+#include "ContaEspecial.h"
+
+using namespace std;
+
+int main(){
+	Conta c = new Conta();
+	Conta *c1 = new Conta("Alisson", 100000, 123456, 456789);
+	ContaEspecial *c2 = new ContaEspecial("Maritan", 10000, 1234, 253);	
+	
+	cout << c1->Sacar(10000000000000) <<\n;
+	cout << c1->Depositar(20) << \n;
+	cout << c1->DefinirLimite() << endl;
+	
+	cout << c2->Sacar(1000000000000000) << \n;
+	cout << c2->Depositar(30) << \n;
+	cout << c2->DefinirLimite() << endl;
+	
+	
+	return 0;
+}
